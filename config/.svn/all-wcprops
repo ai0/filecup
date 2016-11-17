@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 30
+/filecup/!svn/ver/101/1/config
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/filecup/!svn/ver/1/1/config/__init__.py
+END
+settings.py
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/filecup/!svn/ver/101/1/config/settings.py
+END
+url.py
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/filecup/!svn/ver/91/1/config/url.py
+END

@@ -1,0 +1,84 @@
+﻿$def with(msg=None)
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="title" content=$config.site_name />
+<meta name="keywords" content=$config.site_keyword />
+<meta name="description" content=$config.site_desc />
+<link rel="shortcut icon" href=$config.static/images/favicon.ico />
+<title>$config.site_name</title>
+<link href="http://lib.sinaapp.com/js/bootstrap/2.2.1/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="http://lib.sinaapp.com/js/bootstrap/2.2.1/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+<link href="$config.static/styles/style.css" rel="stylesheet" type="text/css" />
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+	</script>
+<![endif]-->
+</head>
+
+<body>
+
+<div class="container">
+		<div id="logo">
+			<span class="label label-important">文件罐</span>
+			<p id="info_block">
+			<a href="#" id="info_btn" class="btn btn-info" rel="popover" data-placement="bottom"><i class="icon-info-sign icon-white"></i> 须知</a>
+			</p>
+		</div>
+	
+	<div class="hero-unit">
+		<div id="upload_box">
+		<form method="POST" enctype="multipart/form-data" action="">
+			<div class="input-append">
+				<input type="file" name="myfile" id="myfile" onchange="fileSelected();" style="display:none">
+				<input class="span2-xlarge" id="fileName" type="text" style="cursor:text" readonly>
+				<button class="btn" type="button" onclick="myfile.click();">浏览文件</button>
+			</div>
+			<button class="btn btn-large btn-primary" data-loading-text='<i class="icon-time icon-white"></i>入罐中...' data-complete-text='<i class="icon-gift icon-white"></i>成功入罐' id="sub_btn" type="button" onclick="uploadFile()"><i class="icon-tint icon-white"></i>入罐</button>
+		</form>
+		</div>
+		<div id="error_area" class="alert alert-error">
+			<a class="close" data-dismiss="alert">&times;</a>
+			<h4 class="alert-heading">错误</h4>
+			<div id="error_msg"></div>
+		</div>
+		<div id="info_area" class="alert alert-info">
+			<a class="close" data-dismiss="alert">&times;</a>
+			<h4 class="alert-heading">状态</h4>
+			<div id="info_msg"></div>
+		</div>
+		<div id="progress_area">
+			<div class="progress progress-striped active">
+			<div class="bar" id="progress_bar"></div></div>
+		</div>
+	</div>
+	
+	<div id="upload_result" class="modal hide fade">
+		<div class="modal-header">
+			<a class="close" data-dismiss="modal" >&times;</a>
+			<h3>罐子住址：</h3>
+        </div>
+		<div class="modal-body">
+			<h4>您的罐子住址为：</h4>
+			<span id="fileurlBox" class="label label-important"><p><div id="file_url"></div></p></span>
+		</div>
+		<div class="modal-footer">
+			<button class="btn btn-primary" data-dismiss="modal" id="copy_btn">确定</button>
+		</div>
+	</div>
+	
+	<div id="footer">
+		<br><br><br><p><img src="http://static.sae.sina.com.cn/image/poweredby/120X33_transparent.gif" title="Powered by Sina App Engine"></p>
+		<span><a href="https://1px.tv">♥ 单像素</a> </span>
+	</div>
+
+</div>
+$if msg!=None:
+	<script>error_msg.innerHTML="文件不存在或已超时，请阅读须知。";error_area.style.display="block";</script>
+<script src="http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://lib.sinaapp.com/js/bootstrap/2.0.2/js/bootstrap.min.js"></script>
+<script src="$config.static/js/application.js"></script>
+</body>
+</html>

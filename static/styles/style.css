@@ -1,0 +1,93 @@
+﻿html, body{
+	font-family:'Hiragino Sans GB', "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+	font-size: 13px;
+	color: black;
+	margin:0 0 1px;
+	line-height: 1.5;
+	background-color:white;
+	background-image:url('/static/images/bg.png');
+	background-position:left top;
+	background-repeat:repeat;
+}
+
+::selection {
+    background:#8AC657;
+    color:#fff;
+}
+
+::-moz-selection {
+    background:#8AC657;
+    color:#fff;
+}
+
+::-webkit-selection {
+    background:#8AC657;
+    color:#fff;
+}
+
+#logo{
+    height: 96px;
+    background: url('/static/images/logo.png') no-repeat;
+    margin-bottom: 80px;
+}
+
+#logo span{
+	font-size: 70px;
+	line-height: 110px;
+    margin-left: 120px;
+    display: inline;
+}
+
+#logo p{
+	float:right;
+	line-height: 110px;
+	display: inline;
+}
+
+#upload_box{
+	margin-left:auto;
+	margin-top:auto;
+	width:700px;
+}
+
+#sub_btn{
+	margin-left:90px;
+	margin-top:30px;
+}
+
+.hero-unit{
+	padding:60px 60px 30px 60px;
+	background-color: #5BC0DE;
+    background-image: -moz-linear-gradient(45deg,#fff 25%, transparent 25%, transparent 50%,#fff 50%,#fff 75%, transparent 75%, transparent);
+    background-image:-webkit-gradient(linear,0 100%,100% 0,color-stop(25%,rgba(255,255,255,0.2)),color-stop(25%,transparent),color-stop(50%,transparent),color-stop(50%,rgba(255,255,255,0.2)),color-stop(75%,rgba(255,255,255,0.2)),color-stop(75%,transparent));
+    background-size: 16px 16px;
+}
+
+#fileurlBox{
+	display: block;
+    width: 100%;
+    text-align: center;
+}
+
+#error_area{
+	display:none;
+}
+
+#info_area{
+	display:none;
+}
+
+#progress_area{
+	display:none;
+}
+
+#footer{
+	color: #999;
+	text-align: center;
+}
+
+#footer img {
+    vertical-align: middle;
+    align: left; 
+    border: none;
+}
